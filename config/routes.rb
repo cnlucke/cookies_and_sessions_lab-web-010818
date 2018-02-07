@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  ## action: products#index
+  # resources :products, only: [:index]
+  ## action: products#add_to_cart
+  # post '/products/add_to_cart' => "products#add", as: 'add_product'
+  # get '/cart' => "application#cart", as: 'cart'
+  get '/' => "products#index"
+  post '/' => "products#add"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
